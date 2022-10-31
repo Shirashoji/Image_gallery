@@ -5,20 +5,20 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-
+const images = [...Array(5).keys()].map((d) => { return "images/pic" + (d + 1) + ".jpg"; });
 /* Declaring the alternative text for each image file */
 
 /* Looping through images */
 
 
-for (let i = 1; i <= 5; i++) {
-    const xxx = 'images/pic' + i + '.jpg';
+images.forEach(xxx => {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', xxx);
     newImage.setAttribute('alt', xxx);
     thumbBar.appendChild(newImage);
     newImage.setAttribute('onclick', `displayedImage.src = '${xxx}'`);
-}
+});
+
 /* Wiring up the Darken/Lighten button */
 btn.onclick = function () {
     if (btn.getAttribute('class') === 'dark') {
