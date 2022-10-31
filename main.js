@@ -6,10 +6,10 @@ const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
 const images = [...Array(5).keys()].map((d) => { return "images/pic" + (d + 1) + ".jpg"; });
+
 /* Declaring the alternative text for each image file */
 
 /* Looping through images */
-
 
 images.forEach(xxx => {
     const newImage = document.createElement('img');
