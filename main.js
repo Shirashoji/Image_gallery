@@ -16,7 +16,9 @@ images.forEach(xxx => {
     newImage.setAttribute('src', xxx);
     newImage.setAttribute('alt', xxx);
     thumbBar.appendChild(newImage);
-    newImage.setAttribute('onclick', `displayedImage.src = '${xxx}'`);
+    newImage.addEventListener("click", () => {
+        displayedImage.setAttribute('src', xxx);
+    });
 });
 
 /* Wiring up the Darken/Lighten button */
